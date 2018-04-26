@@ -1,1 +1,70 @@
-<h1>CMSimfly</h1><p>測試網站:&nbsp;<a href="https://cmsimfly-topuniversity.rhcloud.com">https://cmsimfly-topuniversity.rhcloud.com</a>&nbsp;</p><p>CMS Simply Fly - 您在說什麼鬼東西?</p><p>將 CMSimply 的 CherryPy 改為 Flask</p><p>在近端 config 與 content.htm 位於 &nbsp;local_data 目錄中, 若在 OpenShift 則位於 &nbsp;Data persistent 目錄中</p><h2>基本功能</h2><p>在瀏覽器中管理網際檔案內容</p><p>利用瀏覽器上傳檔案 (可同時上傳多個檔案)</p><p>檔案包含一般常用數位檔案與影像檔案</p><p>使用者並可直接在瀏覽器的頁面編輯區中引用檔案或顯示圖形檔案</p><h2>操作問題</h2><h1>學習 Python3</h1><p>CMSimfly 程式架構</p><p>CMSimfly 使用的 Python3 程式語法</p><p>CMSimfly 與機械設計</p><p>What about 網際資料庫: SQLite, MySQL 與 PostgreSQL</p><p>利用 PyGroup 進行第二階段的網際程式學習 (導入網際協同設計)</p><h2>機械設計</h2><p>機械設計專題分類:&nbsp;<a href="http://project.mde.tw/blog/yen-ji-jie-she-ji-zhuan-ti-fen-lei.html">http://project.mde.tw/blog/yen-ji-jie-she-ji-zhuan-ti-fen-lei.html</a>&nbsp;</p><p>為何現代人一定要會寫程式</p><p>因為</p><p>數位運算時代來了, 虛實整合已經發展到了一個地步, Why, 當每一部電影都需要 animation 團隊, 您在電影看到的許多畫面都是數位運算的結晶, 應該就能知道未來是虛實高度整合的世界.</p><p>客製化的程度已經到了一個大家都想出走, 都想 DIY 任何式物, 都想從虛實整合的世界中, 得到尊嚴, 讓機器作機器該作的是, 而人就只做人該做的事</p><p>你猜對了</p><p>大多數人都做不到, 因為他們都在作機器比較擅長的事</p><p>好了, 機器擅長做那一類的工作??</p><p>而且聽說機器有學習能力, 機器有深度學習能力, 機器有人工智慧.</p><p>您, 有沒有學習能力, 您有沒有深度學習能力, 您有沒有智慧.</p><p>好的 ,何謂智慧?</p><p>智者知黑白</p><p>慧者去私得智</p><p>所以, 智慧是知如何去私得智之黑白</p><h2>程式方法解題</h2><p>網際繪圖</p><p>好的, 我們能夠在網頁上畫一條直線, 我們能嗎?</p><p>當我們需要依照特定規律畫很多條線的時候, 我們會不會願意採用手工的方式一條一條畫?</p><p>當我們需要在一個工件上鑽很多孔, 假如這些孔的位置與大小有特定規律, 應該就可以利用程式方法來完成 - 效能是一個考量</p><p>假如這些孔的位置並沒有特定規律, 而是必須配合其他製程或功能設計考量而配置, 那麼該如何安排鑽孔次序, 這與典型的 Salesman &nbsp;problem 路徑安排類似, 請以 salesman problem 搜尋, 以便了解工程師該如何解決這個問題</p><p>工程師 Engineers 發明方法解決問題</p><p>人類還不會利用輪子提升物體移動效率之前, 要般動重物是非常辛苦的&nbsp;</p><p>好的, 現在有了輪子 (還知道如何運用流體的浮力, 特別注意, 力可以是阻力, 也可以是浮力, 端看如何巧妙應用), 但是我們這一堆人要重複製造輪子嗎?</p><p>機械者, 機巧之器械也!</p><p>請以重複造輪子搜尋, 看大家如何說?</p><p>一個人, 一群人, 一起做一件大事, 應該如何做? 各自做? 合作? 協同? 勾心鬥角地做? 還是?</p><p>您作為一個大一新生, 您假如在完全不明瞭未來4年的 IT 使用情境, 就已經買了電腦桌機或筆電, 那你平常一定都是閉著眼睛走路....</p><h1>Flask 使用手冊</h1><p><a href="http://flask.pocoo.org/docs/0.10/.latex/Flask.pdf">http://flask.pocoo.org/docs/0.10/.latex/Flask.pdf</a></p><p>local <a href="/download/?type=files&amp;filename=Flask.pdf">Flask.pdf</a>&nbsp;(表示 CMSimfly 的 downlosd 功能是正常的, 但是 downloads 則有問題!!</p><p>Micro 等級的 Python 網際程式框架指的是指保留核心基礎功能, 其他功能則以 plugin 附加</p><p>特性是模組化強, 功能較具彈性</p><p>Flask depends on two external libraries, Werkzeug and Jinja2.</p><p>Werkzeug is a toolkit for WSGI, the standard Python interface between web applications and a variety of servers for both development and deployment.</p><p>Jinja2 renders templates.</p><p>利用 pip 安裝 Flask</p><p>sudo pip install Flask</p><p>假如是在 Windows, 則要將 Python 安裝目錄下的 Scripts 設為指令搜尋路徑</p><p>最小執行程式設定</p><pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask# 將檔案存成 simpleflask.pyapp = Flask(__name__)@app.route('/')def hello_world():    return 'Hello World!'if __name__ == '__main__':    app.run()</pre><p>Flask 程式執行:</p><p>python simpleflask.py</p><p>然後以瀏覽器 <a>http://localhost:5000</a>&nbsp;擷取 Flask 程式回應內容</p><p>So what did that code do?</p><ol><li>First we imported the Flask class. An instance of this class will be our WSGI application.</li><li>&nbsp;Next we create an instance of this class. The first argument is the name of the application&rsquo;s module or package. If you are using a single module (as in this example), you should use __name__ because depending on if it&rsquo;s started as application or imported as module the name will be different ('__main__' versus the actual import name). This is needed so that Flask knows where to look for templates, static files, and so on.&nbsp;</li><li>We then use the route() decorator to tell Flask what URL should trigger our function.</li><li>The function is given a name which is also used to generate URLs for that particular function, and returns the message we want to display in the user&rsquo;s browser.</li><li>Finally we use the run() function to run the local server with our application. The if __name__ == '__main__': makes sure the server only runs if the script is executed directly from the Python interpreter and not used as an imported module.</li><li>To stop the server, hit control-C.</li></ol>
+<h1>第12組期中報告</h1>
+<h2>組員</h2>
+<p>學生:</p>
+<p>40623105陳微云</p>
+<p>40623102吳柔燕</p>
+<p>40623124葉修宏</p>
+<p>&nbsp;</p>
+<p>指導教授:嚴家銘</p>
+<h2>建立 Flask 網際應用程式</h2>
+<p>1.將&nbsp;<a href="https://drive.google.com/file/d/1qSVNH1052bcPyepgGfxN8dciufOM0gUu/view?usp=sharing">kmol_level2</a>&nbsp;解開到隨身碟中.</p>
+<p>2.在 kmol_level2中附加&nbsp;<a href="https://github.com/mdecourse/wcms2018/raw/1314c47b97dc62142c7ee569ccf20f80355b92d7/heroku/heroku_portable.7z">heroku_portable.7z</a>,</p>
+<p>3.複製%Disk%:\heroku\bin至set path1後面</p>
+<p>4.利用學校的Gmail到&nbsp;<a href="https://www.heroku.com/pricing">heroku</a>&nbsp;申請帳號.</p>
+<p>5.在 Heroku cd2018 倉儲中&nbsp;<a href="https://raw.githubusercontent.com/mdecourse/cd2018/9397b6ad12f9a0c3cc0925b1ca344d322166a2dc/python/flask_ex1.py">flask_ex1.py程式</a>,&nbsp;<a href="http://flask.pocoo.org/">Flask</a>&nbsp;改名為&nbsp;<a href="https://raw.githubusercontent.com/mdecourse/wcms2018/a21bc6a27a2e5384060d5ca688aad1863362f378/flask/flask_heroku/app_run.py">app_run.py</a></p>
+<p>6.新增3個檔案:</p>
+<p>檔案Procfile,內容為:</p>
+<p>web gunicorn app_run:app</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 檔案 runtime.txt,內容為:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; python-3.6.2</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 檔案requirements.txt,內容為:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Flask==0.12.2</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gunicorn==19.7.1</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jinja2==2.10</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MarkupSafe==1.0</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Werkzeug==0.14.1</p>
+<p>7.在近端可攜程式命令列中, 輸入郵箱與密碼, 登入Heroku 帳號:</p>
+<p>heroku login就能clone heroku 資料</p>
+<p>8.接下來則必須在近端可攜程式命令列中, 打 heroku client 指令, 以及 git 指令, 準備要送到遠端的倉儲內容.</p>
+<p>9.將 app_run.py, Procfile, runtime.txt 與 requirements.txt 等檔案放入 flask_heroku 目錄中,進入 flask_heroku 目錄, 以指令git init建立.git目錄</p>
+<ol start="10">
+<li>合併網頁,打指令git remote add github (合併網址).git</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;git push github</p>
+<p>11.以git 指令 add, commit 以及 push 提交推送到 Heroku的對應倉儲,以 git config 設定 user.name 以及 user.email, 才能提交推送,命令列必須位於 flask_heroku 目錄.</p>
+<p>git add .<br />git commit -m "自訂名稱"<br />git push</p>
+<h2>各分組 heroku 雲端主機</h2>
+<ol>
+<li>命令列中複製heroku -- version&rarr;enter檢驗是否成功</li>
+<li>到heroku登入&rarr;New&rarr;create new app</li>
+<li>至可攜程式命令列中打heroku login,輸入mail</li>
+<li>新增資料夾在Y槽,資料夾名稱自訂</li>
+<li>至可攜程式命令列中打git init, 在打heroku git:remote -a pacific-forest-33210</li>
+<li>到Y&rarr;wcms2018&rarr;heroku&rarr;pacific複製除了資料夾以外的檔案貼到(新資料夾)中</li>
+<li>至可攜程式命令列中打git add. &rarr;git commit &ndash;m &ldquo; &rdquo;&rarr;git push heroku master</li>
+<li>複製網址查詢有沒有成功</li>
+</ol>
+<p>※修改密碼 : start&rarr;cd(新資料夾) &rarr;python app_run.py&rarr;ctrlC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>Localhost:5000&rarr;login&rarr;修改密碼&rarr;上傳檢查</p>
+<h2>雲端內容管理系統</h2>
+<ol>
+<li>至可攜程式命令列中打Git clone (heroku網址).git(自訂名稱01)</li>
+<li>查cmsimfly&rarr;點選git&rarr;(複製網址01)</li>
+<li>至可攜程式命令列中打git clone(複製網址01).git(自訂名稱02)</li>
+<li>複製(自訂名稱02)之.git以外的資料夾到(自訂名稱01)</li>
+<li>在(自訂名稱01)新增3個檔案:</li>
+</ol>
+<p>檔案Procfile , 檔案 runtime.txt , 檔案requirements.txt</p>
+<ol start="6">
+<li>至可攜程式命令列中cd進入到(自訂名稱01),打python wsgi.py</li>
+<li>到近端https://localhost9443 , config修改名稱跟密碼 , 再</li>
+</ol>
+<p>git add .&rarr;git commit -m "自訂名稱"&rarr;git push&rarr;複製網址檢查有無成功</p>
+<ol start="8">
+<li>到github&rarr;new repository新建資料</li>
+<li>合併,至可攜程式命令列中打git push github&rarr;帳密認證&rarr;git remote add github(git網址)&rarr;git push
+<h2>心得</h2>
+<p>一開始選這門課程的時，原以為是跟上學期程式語言一樣是自己獨自完成的，結果並不是我想的那樣，而是三人為一組來共同完成老師所教導的作業，這不僅讓我學的如何跟別人交際，也讓我懂得如何分配小組的工作，不會讓誰比較輕鬆或著是誰做的比較多，小組最重要的是彼此的默契，這也讓我覺得這門課很有意義。</p>
+<h2>筆記</h2>
+<p><img src="/download/?type=images&amp;filename=orca_share_media1524757305699.JPG" alt="" width="538" height="538" /></p>
+<h2>自評成績</h2><p>40623105陳微云&nbsp; &nbsp; 76</p><p>40623102吳柔燕&nbsp; &nbsp; 76</p><p>40623124葉修宏&nbsp; &nbsp; 76</p>
